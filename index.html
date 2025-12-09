@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Psychology Copy Webinar - Learn the psychology behind high-converting copy for your business">
+    <meta name="theme-color" content="#0f172a">
+    <title>Psychology Copy - Small Business Owner's Listen Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .font-tech {
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .gradient-btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-btn:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+        }
+        
+        .gradient-btn:active {
+            transform: translateY(0);
+        }
+        
+        .gradient-accent {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+        
+        .countdown {
+            font-family: 'Space Mono', monospace;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(30, 41, 59, 0.5) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        
+        .scarcity-badge {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(249, 115, 22, 0.1) 100%);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        .hero-text {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        
+        .subheader-text {
+            font-size: clamp(1.25rem, 4vw, 2rem);
+            line-height: 1.3;
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        .benefit-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .benefit-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .benefit-item::after {
+            content: '✓';
+            position: absolute;
+            left: 0.2rem;
+            top: -0.1rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .form-input {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            background: rgba(15, 23, 42, 0.8);
+            border-color: rgba(59, 130, 246, 0.5);
+            outline: none;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+        }
+        
+        .timer-section {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(249, 115, 22, 0.05) 100%);
+            border: 2px solid rgba(239, 68, 68, 0.2);
+            border-radius: 16px;
+        }
+        
+        .social-proof-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+        }
+        
+        .badge-shine {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 smooth-scroll">
+    
+    <!-- HEADER / BRAND SECTION -->
+    <header class="w-full bg-slate-950 border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-center">
+            <div class="text-center">
+                <h1 class="text-3xl sm:text-4xl font-tech font-bold text-gradient">PSYCHOLOGY COPY</h1>
+                <p class="text-slate-400 text-sm mt-1 tracking-widest">Master the Art of Conversion</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="w-full bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 pt-12 sm:pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <!-- Scarcity Badge -->
+            <div class="flex justify-center mb-8">
+                <div class="scarcity-badge px-4 py-2 rounded-full inline-flex items-center gap-2">
+                    <svg class="w-4 h-4 text-orange-500 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                    </svg>
+                    <span class="text-xs sm:text-sm font-semibold text-orange-400">LIMITED SPOTS AVAILABLE</span>
+                </div>
+            </div>
+
+            <!-- Main Headline -->
+            <div class="text-center mb-8 sm:mb-12">
+                <h2 class="hero-text font-tech font-black mb-4 text-white leading-tight">
+                    Small Business Owner's
+                    <span class="text-gradient"> Listen Up</span>
+                </h2>
+                <p class="subheader-text text-slate-300 mb-8 leading-relaxed">
+                    Discover the psychology-backed secrets that transform ordinary copy into conversion machines. Watch your sales skyrocket while your competitors wonder what you're doing differently.
+                </p>
+            </div>
+
+            <!-- Timer Section -->
+            <div class="timer-section p-6 sm:p-8 mb-8 sm:mb-12 text-center">
+                <p class="text-slate-400 text-sm sm:text-base mb-4 font-semibold tracking-wide">WEBINAR STARTS IN:</p>
+                <div class="grid grid-cols-4 gap-3 sm:gap-4 max-w-md mx-auto mb-6">
+                    <div class="bg-slate-900 rounded-lg p-3 sm:p-4 border border-slate-800">
+                        <div class="countdown text-blue-400" id="days">00</div>
+                        <p class="text-xs text-slate-500 mt-2 uppercase tracking-wider">Days</p>
+                    </div>
+                    <div class="bg-slate-900 rounded-lg p-3 sm:p-4 border border-slate-800">
+                        <div class="countdown text-purple-400" id="hours">00</div>
+                        <p class="text-xs text-slate-500 mt-2 uppercase tracking-wider">Hours</p>
+                    </div>
+                    <div class="bg-slate-900 rounded-lg p-3 sm:p-4 border border-slate-800">
+                        <div class="countdown text-blue-400" id="minutes">00</div>
+                        <p class="text-xs text-slate-500 mt-2 uppercase tracking-wider">Minutes</p>
+                    </div>
+                    <div class="bg-slate-900 rounded-lg p-3 sm:p-4 border border-slate-800">
+                        <div class="countdown text-purple-400" id="seconds">00</div>
+                        <p class="text-xs text-slate-500 mt-2 uppercase tracking-wider">Seconds</p>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-xs sm:text-sm">⚡ Spots filling fast - Don't miss out!</p>
+            </div>
+
+            <!-- Primary CTA Button -->
+            <div class="flex justify-center mb-8">
+                <a href="https://psychologycopy.com" class="gradient-btn px-8 sm:px-12 py-4 sm:py-5 rounded-lg font-bold text-white text-lg sm:text-xl shadow-2xl hover:shadow-3xl inline-block transition-all duration-300 transform hover:scale-105">
+                    <span class="flex items-center gap-2 justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Register Now - It's Free
+                    </span>
+                </a>
+            </div>
+
+            <p class="text-center text-slate-400 text-sm">✓ No credit card required • ✓ Instant access • ✓ 100% risk-free</p>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF SECTION -->
+    <section class="w-full bg-slate-900 border-t border-slate-800 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
+                <!-- Stat 1 -->
+                <div class="text-center">
+                    <p class="text-4xl sm:text-5xl font-tech font-black text-gradient mb-2">47K+</p>
+                    <p class="text-slate-300 font-semibold">Small Business Owners Trained</p>
+                </div>
+                <!-- Stat 2 -->
+                <div class="text-center">
+                    <p class="text-4xl sm:text-5xl font-tech font-black text-gradient mb-2">3.2x</p>
+                    <p class="text-slate-300 font-semibold">Average Conversion Increase</p>
+                </div>
+                <!-- Stat 3 -->
+                <div class="text-center">
+                    <p class="text-4xl sm:text-5xl font-tech font-black text-gradient mb-2">$8.7M</p>
+                    <p class="text-slate-300 font-semibold">Generated for Clients</p>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-6 rounded-lg card-hover">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <p class="text-slate-200 mb-6 leading-relaxed">"This webinar completely changed how I write my sales pages. My conversion rate went from 2% to 6.7% in just three weeks. Best investment I've made for my business."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg">JM</div>
+                        <div>
+                            <p class="font-bold text-white">Jessica Martinez</p>
+                            <p class="text-slate-400 text-sm">E-commerce Founder</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-6 rounded-lg card-hover">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <p class="text-slate-200 mb-6 leading-relaxed">"I've taken dozens of marketing courses, but this is the first one that actually focuses on the psychology behind why people buy. Game-changer for my SaaS business."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">RK</div>
+                        <div>
+                            <p class="font-bold text-white">Robert Kim</p>
+                            <p class="text-slate-400 text-sm">SaaS Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-6 rounded-lg card-hover">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <p class="text-slate-200 mb-6 leading-relaxed">"The frameworks taught in this webinar are so powerful. I applied them to my email sequences and saw a 156% increase in click-through rates. Absolutely incredible."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center text-white font-bold text-lg">SC</div>
+                        <div>
+                            <p class="font-bold text-white">Sarah Chen</p>
+                            <p class="text-slate-400 text-sm">Digital Marketing Agency Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card p-6 rounded-lg card-hover">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <p class="text-slate-200 mb-6 leading-relaxed">"The psychology principles taught here go deep. I now understand exactly why my old copy wasn't converting. Already implementing the strategies and seeing results."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white font-bold text-lg">MB</div>
+                        <div>
+                            <p class="font-bold text-white">Marcus Brown</p>
+                            <p class="text-slate-400 text-sm">Coaching Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center gap-6 items-center">
+                <div class="badge-shine px-4 py-3 rounded-lg flex items-center gap-2">
+                    <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-sm font-semibold text-slate-200">Trusted by 47K+ Owners</span>
+                </div>
+                <div class="badge-shine px-4 py-3 rounded-lg flex items-center gap-2">
+                    <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <span class="text-sm font-semibold text-slate-200">4.9/5 Star Rating</span>
+                </div>
+                <div class="badge-shine px-4 py-3 rounded-lg flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 000-2H6V3a1 1 0 01-1-1zm0 0a2 2 0 012 2v1h1a1 1 0 100-2H7V3a2 2 0 00-2-2zm6 0a1 1 0 011 1v1h1a1 1 0 100-2h-1V3a1 1 0 01-1-1zm0 0a2 2 0 012 2v1h1a1 1 0 100-2h-1V3a2 2 0 00-2-2zm6 0a1 1 0 011 1v1h1a1 1 0 100-2h-1V3a1 1 0 01-1-1zm0 0a2 2 0 012 2v1h1a1 1 0 100-2h-1V3a2 2 0 00-2-2zM2 8a1 1 0 011 1v7a1 1 0 001 1h12a1 1 0 001-1V9a1 1 0 100-2H3a1 1 0 00-1 1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-sm font-semibold text-slate-200">Limited Spots - Act Now</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="w-full bg-slate-950 border-t border-slate-800 py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12 sm:mb-16">
+                <h3 class="text-3xl sm:text-4xl font-tech font-black text-white mb-4">
+                    Exclusive Offer for <span class="text-gradient">Early Adopters</span>
+                </h3>
+                <p class="text-slate-300 text-lg">Limited spots available at grandfathered pricing</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Feature 1: Grandfathered Pricing -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-8 card-hover">
+                    <div class="feature-icon mb-6">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Grandfathered Pricing</h4>
+                    <p class="text-slate-300 mb-4 leading-relaxed">Lock in today's price forever. Once you join at this rate, you'll never pay more. This is the lowest price this course will ever be offered at.</p>
+                    <ul class="space-y-2">
+                        <li class="text-slate-400 text-sm flex items-center gap-2">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Lifetime access at current rate
+                        </li>
+                        <li class="text-slate-400 text-sm flex items-center gap-2">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Includes all future updates
+                        </li>
+                        <li class="text-slate-400 text-sm flex items-center gap-2">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Refer others and earn commissions
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Very Limited Spots -->
+                <div class="bg-gradient-to-br from-slate-900 to-slate-800 border border-orange-500 border-opacity-30 rounded-xl p-8 card-hover glow-effect">
+                    <div class="feature-icon mb-6">
+                        <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Very Limited Spots</h4>
+                    <p class="text-slate-200 mb-4 leading-relaxed">We're capping enrollment at just 500 spots for this cohort to ensure personalized attention and community quality. Once we hit capacity, we close registration.</p>
+                    <div class="bg-slate-800 rounded-lg p-4 mb-4">
+                        <p class="text-orange-400 font-bold text-lg mb-2">⏰ <span id="spotsRemaining">347</span> Spots Remaining</p>
+                        <div class="w-full bg-slate-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full" style="width: 69.4%;"></div>
+                        </div>
+                        <p class="text-slate-400 text-xs mt-2">69.4% of spots claimed</p>
+                    </div>
+                    <p class="text-slate-300 text-sm">
+                        <strong>First Come, First Serve.</strong> This isn't a waitlist. When spots are gone, they're gone. Join now to secure your seat.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Call-to-action in features section -->
+            <div class="text-center bg-gradient-to-r from-blue-950 to-purple-950 border border-blue-500 border-opacity-30 rounded-xl p-8 sm:p-12">
+                <h4 class="text-2xl font-bold text-white mb-4">Ready to Master Psychology Copy?</h4>
+                <p class="text-slate-300 mb-8 max-w-2xl mx-auto">Don't let this opportunity slip away. Secure your spot now at grandfathered pricing and start transforming your copy into conversion machines.</p>
+                <a href="https://psychologycopy.com" class="gradient-btn px-10 py-4 rounded-lg font-bold text-white text-lg inline-block shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
+                    <span class="flex items-center gap-2 justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Claim Your Spot Now
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="w-full bg-slate-900 border-t border-slate-800 py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12 sm:mb-16">
+                <h3 class="text-3xl sm:text-4xl font-tech font-black text-white mb-4">
+                    The Three Pillars of <span class="text-gradient">Conversion Success</span>
+                </h3>
+                <p class="text-slate-300 text-lg">What you'll master in this webinar</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Benefit 1: Conversions -->
+                <div class="bg-slate-800 border border-slate-700 rounded-xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-4 text-center">Conversions</h4>
+                    <p class="text-slate-300 mb-6 leading-relaxed text-center">Learn the psychological triggers that make people take action. Understand the exact mechanisms behind why certain copy converts at 5x rates compared to ordinary copy.</p>
+                    <div class="space-y-3">
+                        <div class="benefit-item text-slate-200">
+                            <span>The scarcity principle that creates urgency</span>
+                        </div>
+                        <div class="benefit-item text-slate-200">
+                            <span>Social proof frameworks that build trust instantly</span>
+                        </div>
+                        <div class="benefit-item text-slate-200">
+                            <span>Authority positioning that commands premium prices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 2: Conversions -->
+                <div class="bg-slate-800 border border-slate-700 rounded-xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-4 text-center">Conversions</h4>
+                    <p class="text-slate-300 mb-6 leading-relaxed text-center">Master the art of crafting irresistible offers. Discover how to position your product as the obvious choice and eliminate buyer hesitation before it even starts.</p>
+                    <div class="space-y-3">
+                        <div class="benefit-item text-slate-200">
+                            <span>The psychology of pricing and value perception</span>
+                        </div>
+                        <div class="benefit-item text-slate-200">
+                            <span>Objection handling through strategic messaging</span>
+                        </div>
+                        <div class="benefit-item text-slate-200">
+                            <span>The reciprocity principle that drives sales</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Conversions -->
+                <div class="bg-slate-800 border border-slate-700 rounded-xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-4 text-center">Conversions</h4>
+                    <p class="text-slate-300 mb-6 leading-relaxed text-center">Transform your entire funnel with psychology-backed sequences. From landing pages to emails to sales pages, apply these principles everywhere for compound results.</p>
+                    <div class="space-y-3">
+                        <div class="benefit-item text-slate-200">
+                            <span>Email sequences that generate 40%+ open rates</span>
+                        </div>
+                        <div class="benefit-item text-slate-200">
+                            <span>Landing page frameworks proven to convert</span>
+                        </div>
+                        <div class="benefit-item text-slate-200">
+                            <span>Sales page templates you can use immediately</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Preview -->
+            <div class="bg-gradient-to-r from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8 sm:p-12">
+                <h4 class="text-2xl font-bold text-white mb-8 text-center">What Students Achieve</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <p class="text-4xl font-tech font-black text-blue-400 mb-2">3.2x</p>
+                        <p class="text-slate-300 font-semibold">Avg. Conversion Lift</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-tech font-black text-purple-400 mb-2">$847K+</p>
+                        <p class="text-slate-300 font-semibold">Revenue Generated</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-tech font-black text-green-400 mb-2">92%</p>
+                        <p class="text-slate-300 font-semibold">Satisfaction Rate</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-tech font-black text-orange-400 mb-2">30 Days</p>
+                        <p class="text-slate-300 font-semibold">To See Results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="w-full bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="scarcity-badge px-4 py-2 rounded-full inline-flex items-center gap-2 mb-6">
+                <svg class="w-4 h-4 text-orange-500 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                </svg>
+                <span class="text-xs sm:text-sm font-semibold text-orange-400">ONLY <span id="finalSpots">347</span> SPOTS LEFT</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-tech font-black text-white mb-4">
+                Your Competitors Are Already Signing Up
+            </h2>
+            <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+                Every day that passes is a day you're leaving conversions on the table. The psychology principles taught in this webinar are being used by your competitors right now. Don't get left behind.
+            </p>
+
+            <div class="mb-8">
+                <a href="https://psychologycopy.com" class="gradient-btn px-12 py-5 rounded-lg font-bold text-white text-xl shadow-2xl hover:shadow-3xl inline-block transition-all duration-300 transform hover:scale-105">
+                    <span class="flex items-center gap-2 justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Register Now - Free Webinar
+                    </span>
+                </a>
+            </div>
+
+            <p class="text-slate-400 text-sm mb-6">✓ Instant access • ✓ No credit card • ✓ 100% free • ✓ Lifetime recordings</p>
+
+            <div class="bg-slate-800 border border-slate-700 rounded-lg p-6 mt-8">
+                <p class="text-slate-300 mb-4">
+                    <strong class="text-white">Still on the fence?</strong> Here's what happens when you register:
+                </p>
+                <ul class="text-left max-w-md mx-auto space-y-3 text-slate-300">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>You get instant access to the webinar replay</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Access to our private community of 47K+ entrepreneurs</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Bonus templates worth $497 absolutely free</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Special offer on the full course (60% off for attendees)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-slate-950 border-t border-slate-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <!-- Primary CTA -->
+            <div class="text-center mb-8">
+                <a href="https://psychologycopy.com" class="gradient-btn px-10 py-4 rounded-lg font-bold text-white text-lg inline-block shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
+                    <span class="flex items-center gap-2 justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Register Now - Limited Spots
+                    </span>
+                </a>
+            </div>
+
+            <!-- Footer Info -->
+            <div class="border-t border-slate-800 pt-8 text-center">
+                <p class="text-slate-400 text-sm mb-2">
+                    Questions? Email us at <a href="mailto:hector@psychologycopy.com" class="text-blue-400 hover:text-blue-300 transition-colors">hector@psychologycopy.com</a>
+                </p>
+                <p class="text-slate-500 text-xs">
+                    © 2024 Psychology Copy. All rights reserved. | Secure, encrypted registration.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COUNTDOWN TIMER SCRIPT -->
+    <script>
+        function startCountdown() {
+            // Set the webinar date to 7 days from now
+            const webinarDate = new Date();
+            webinarDate.setDate(webinarDate.getDate() + 7);
+            webinarDate.setHours(14, 0, 0, 0);
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = webinarDate.getTime() - now;
+
+                if (distance < 0) {
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+
+        // Simulate spot depletion
+        function updateSpots() {
+            let spots = 347;
+            let final = 347;
+
+            setInterval(() => {
+                if (Math.random() > 0.7 && spots > 50) {
+                    spots--;
+                    final--;
+                    document.getElementById('spotsRemaining').textContent = spots;
+                    document.getElementById('finalSpots').textContent = final;
+                }
+            }, 3000);
+        }
+
+        // Start animations when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            startCountdown();
+            updateSpots();
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
